@@ -2,6 +2,7 @@ package com.explorati.o2o.dao;
 
 import com.explorati.o2o.BaseTest;
 import com.explorati.o2o.entity.Area;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
