@@ -2,7 +2,7 @@ package com.explorati.o2o.entity;
 
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * @ Author : Weijian_Wang
@@ -20,7 +20,7 @@ public class ProductImg {
     //权重
     private Integer priority;
     //创建时间
-    private Date createTime;
+    private LocalDateTime createTime;
     //商品ID
     private Long productId;
 }

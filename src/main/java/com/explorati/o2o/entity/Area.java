@@ -1,6 +1,7 @@
 package com.explorati.o2o.entity;
 
 import lombok.Data;
+import lombok.NonNull;
 
 import java.util.Date;
 
