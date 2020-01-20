@@ -2,6 +2,7 @@ package com.explorati.o2o.service;
 
 import com.explorati.o2o.dto.ShopExecution;
 import com.explorati.o2o.entity.Shop;
+import com.explorati.o2o.exceptions.ShopOperationException;
 
 import java.io.InputStream;
 
@@ -11,5 +12,31 @@ import java.io.InputStream;
  * @ Description ：商铺Service层
  */
 public interface ShopService {
-    ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName);
+    /**
+     * 新增店铺
+     *
+     * @param shop
+     * @param shopImgInputStream
+     * @param fileName
+     * @return
+     */
+    ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+
+    /**
+     * 通过店铺id获取店铺信息
+     *
+     * @param shopId
+     * @return
+     */
+    Shop getByShopId(long shopId);
+
+    /**
+     * 更新店铺信息，包括对图片的处理
+     *
+     * @param shop
+     * @param shopImgInputStream
+     * @param fileName
+     * @return
+     */
+    ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
 }
